@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeXus Technologies.Inc</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+  <style>
+    .fw-bold {
+      font-family: "bree serif";
+    }
+
+    .card-body {
+      font-family: 'Nanum Gothic', sans-serif !important;
+    }
+
+    .h3,
+    h3 {
+      font-family: "bree serif";
+    }
+
+    .py-2 {
+      font-family: "bree serif";
+    }
+  
+
+    .pb-2 {
+      font-family: "bree serif";
+    }
+    .fs-2 {
+      font-family: "bree serif";
+      color: #0b60dd !important;
+}
+.h5, h5 {
+  font-family: "bree serif";
+  font-size: 1.2rem;
+    margin-left: -6px;
+}
+.text-body-secondary {
+  font-family: 'Nanum Gothic', sans-serif !important;
+  font-size: 1rem !important;
+}
+.accordion-item:first-of-type .accordion-button {
+  font-family: "bree serif";
+}
+.accordion-button:focus {
+  font-family: "bree serif";
+}
+.h1, h1 {
+    font-family: "bree serif";
+}
+  </style>
+</head>
+
+<body>
+  <!-- navbar  -->
+  <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <h3> <a class="navbar-brand text-danger" href="/">NeXus Technologies</a> </h3>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/mission">Our Mission</a></li>
+              <li>
+              <li><a class="dropdown-item" href="/team">Our Team</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/support">Support Center</a></li>
+            </ul>
+          </li>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+        <button class="btn btn-outline-danger mx-2" data-bs-toggle="modal"
+          data-bs-target="#loginModal">Login</button><button class="btn btn-outline-primary mx-2" data-bs-toggle="modal"
+          data-bs-target="#signupModal">Join For Free</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Signup Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-primary" id="signupModalLabel">Signup To NEXUS Technologies</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/signup" method="post">
+            <div class="form-row">
+              <div class="col">
+                First name <input type="text" class="form-control" placeholder="First name" name="firstname">
+              </div>
+              <div class="col">
+                Last name <input type="text" class="form-control" placeholder="Last name" name="lastname">
+              </div>
+            </div>
+            <div class="form-group my-2">
+              <label for="signupFormControlInput1">Email address</label>
+              <input type="email" class="form-control" id="signupFormControlInput1" placeholder="name@example.com" name="email">
+            </div>
+            Education <select class="form-control my-2" name="edu">
+              <option>Select Your Education</option>
+              <option>Information Technology</option>
+              <option>Cyber-security</option>
+              <option>Comerce</option>
+              <option>Agriculture</option>
+              <option>Education</option>
+              <option>Health and Physical Education</option>
+            </select>
+
+            <div class="form-group">
+              <label for="signupFormControlTextarea1">Example textarea</label>
+              <textarea class="form-control" name="about" id="signupFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary my-4">Signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Login Modal -->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-primary" id="loginModalLabel">Login To NEXUS Technologies</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="login" method="post">
+            <div class="form-group">
+              <label for="loginInputEmail1">Email address</label>
+              <input type="email" name="email" class="form-control" id="loginInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="loginInputPassword1">Password</label>
+              <input type="password" name="password" class="form-control" id="loginInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="loginCheck1">
+              <label class="form-check-label" name="Check" for="loginCheck1">Keep me Login</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- carousel -->
+
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="../static/img/carousel/carousel.jpg" alt="" height="500px" width="100%">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Welcome To NeXuS Technologies</h1>
+            <p class="opacity-75"> " Nexus Technologies is a webspace for educational content and resources that, <br> Offers a student everything they need in one place "</p>
+            <p><a class="btn btn-lg btn-outline-primary" href="/contact">Join Us</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <img src="../static/img/carousel/carousel1.jpg" alt="" height="500px" width="100%">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Setting Clear Goals and Learning Paths</h1>
+            <p>We are providing the delivery of learning and training through digital resources</p>
+            <p><a class="btn btn-lg btn-outline-primary" href="/freecourse">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+       <img src="../static/img/carousel/carousel2.jpg" alt="" height="500px" width="100%">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Top Courses We Are Offering Free</h1>
+            <p><a class="btn btn-lg btn-outline-primary" href="/freecourse">Explore Now</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- home section  -->
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-8 col-md-6 mx-auto">
+        <h1 class="fw-bold">Learn today’s most in-demand
+          skills with our free online
+          courses</h1>
+        <p class="lead text-body-secondary">NEXUS Technologies is a learning platform from NEXUS where learners can take
+          free online courses. All of the self-learning courses are free of cost, where you can explore and learn
+          in-demand skills on your schedule. This free online course content is prepared by industry experts & top
+          practitioners.</p>
+        <p>
+          <a href="/explore" class="btn btn-primary my-2">Explore Free Courses</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- courses  -->
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c6.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c4.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c5.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c1.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c2.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c3.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- catagries -->
+  <div class="container px-4 py-5" id="icon-grid">
+    <h1 class="border-bottom py-2">Popular Catagries</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+      <div class="col d-flex align-items-start">
+
+        <div>
+          <p class="border border-dark px-4 py-2"> <a class="text-primary text-decoration-none" href="#">Personaly
+              Developments</a></p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+
+        <div>
+
+          <p class="border border-dark px-4 py-2"><a class="text-primary text-decoration-none" href="#"> Project
+              Management</a></p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+
+        <div>
+
+          <p class="border border-dark px-4 py-2"> <a class="text-primary text-decoration-none" href="#">Enterprise
+              Architecter</a></p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+
+        <div>
+
+          <p class="border border-dark px-4 py-2"> <a class="text-primary text-decoration-none" href="#">Problem Solving
+              Tecno</a></p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+
+        <div>
+
+          <p class="border border-dark px-4 py-2"> <a class="text-primary text-decoration-none" href="#">Information
+              Technology</a> </p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+
+        <div>
+
+          <p class="border border-dark px-4 py-2"> <a class="text-primary text-decoration-none" href="#">Application
+              Security </a> </p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+
+        <div>
+
+          <p class="border border-dark px-4 py-2"> <a class="text-primary text-decoration-none" href="#"> Computer
+              Networking </a></p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+
+        <div>
+
+          <p class="border border-dark px-4 py-2"><a class="text-primary text-decoration-none" href="#">Information
+              Securities </a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- people -->
+
+  <div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Why people choose NeXuS Technologies for their career</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="../static/img/people/p1.jpg" alt="">
+        </div>
+        <p class="fs-2 text-body-emphasis">Margaet peggy</p>
+        <p>"Learning isn't just about being better at your job: it's so much more than that. NeXus Technologies allows
+          me to learn without limits."</p>
+
+
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="../static/img/people/p2.jpg" alt="">
+        </div>
+        <p class="fs-2 text-body-emphasis">Chaitanya A.</p>
+        <p>"When I need courses on topics that my university doesn't offer, NeXus Technologies is one of the best places
+          to go."</p>
+
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="../static/img/people/p3.jpg" alt="">
+        </div>
+        <p class="fs-2 text-body-emphasis">Jennifer J.</p>
+        <p>"I directly applied the concepts and skills I learned from my courses to an exciting new project at work."
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- questions -->
+  <div class="container">
+    <h1 class="border-bottom py-2">Most Frequent Asked Questions : </h1>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            What is NexuS Technologies ?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>NeXuS is a learning platform from NeXuS where learners can take free online courses. All of the
+              self-learning courses are free of cost, where you can explore and learn in-demand skills on your schedule.
+              This free online course content is prepared by industry experts & top practitioners.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Who Should Sign Up ?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>These free online courses are designed for anyone who wants to learn the latest digital skills. We
+              provide courses in the fields of data science, cybersecurity, project management & leadership, cloud
+              computing, digital marketing, and much more. Designed for all professionals, these free courses help
+              students and beginners, as well as experienced developers, engineers, managers, and executives.. The
+              curriculum is designed by renowned industry experts & course advisors. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- others -->
+
+  <div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom">Other topics to explore</h2>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+      <div class="col d-flex align-items-start">
+        <img src="../static/img/catagries/business.png" alt="" height="30px" width="30px">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis px-2">Business</h3>
+          <p class="px-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit Voluptates
+          </p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <img src="../static/img/catagries/fashion.png" alt="" height="30px" width="30px">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis px-2">Fashion</h3>
+          <p class="px-2">Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <img src="../static/img/catagries/art.png" alt="" height="30px" width="30px">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis px-2">Arts</h3>
+          <p class="px-2">Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <img src="../static/img/catagries/health.png" alt="" height="30px" width="30px">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis px-2">Health</h3>
+          <p class="px-2">Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <img src="../static/img/catagries/data.png" alt="" height="30px" width="30px">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis px-2">Data Science</h3>
+          <p class=" px-2">Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <img src="../static/img/catagries/code.png" alt="" height="30px" width="30px">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis px-2">Language Learning</h3>
+          <p class="px-2">Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <img src="../static/img/catagries/math.png" alt="" height="30px" width="30px">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis px-2">Math and Logic</h3>
+          <p class="px-2">Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <img src="../static/img/catagries/science.png" alt="" height="30px" width="30px">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis  px-2">Social Science</h3>
+          <p class=" px-2">Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- pagenation -->
+
+  <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+          <img src="../static/img/footer/logo.jpg" height="100px" width="100px" alt="logo">
+        </a>
+        <p class="text-body-secondary">© Copywrite 2023</p>
+      </div>
+
+      <div class="col mb-3">
+
+      </div>
+
+      <div class="col mb-3">
+        <h5>Nexus</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="/mission" class="nav-link p-0 text-body-secondary">Mission</a></li>
+          <li class="nav-item mb-2"><a href="/team" class="nav-link p-0 text-body-secondary">Our Team</a></li>
+          <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+          <li class="nav-item mb-2"><a href="help" class="nav-link p-0 text-body-secondary">Help and Support</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Community</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Teaching Center</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Learners</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Partners</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog Tec</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>More</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Press</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Investors</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Accessibility</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Modern Slavery Statement</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Manage Preferences</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <!-- footer  -->
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© Copywrite 2023 NeXus Technologies.Inc | All Rights Reserved</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-body-secondary" href="https://twitter.com/asadshamsuddin" target="_blank"><img
+              src="../static/img/footer/twitter.png" height="30px" width="30px" alt=""></a>
+        </li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/muhammad-asad-shams-ud-din/"
+            target="_blank"><img src="../static/img/footer/linkedin.png" height="30px" width="30px" alt=""></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://web.facebook.com/Muhammadasadshamsuddin/"
+            target="_blank"><img src="../static/img/footer/facebook.png" height="30px" width="30px" alt=""></a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- js  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

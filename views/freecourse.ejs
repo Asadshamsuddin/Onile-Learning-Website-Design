@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeXus Technologies.Inc</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+   
+</head>
+
+<body>
+  <!-- navbar  -->
+  <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <h3> <a class="navbar-brand text-danger" href="/">NeXus Technologies</a> </h3>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/mission">Our Mission</a></li>
+              <li>
+              <li><a class="dropdown-item" href="/team">Our Team</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/support">Support Center</a></li>
+            </ul>
+          </li>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+        <button class="btn btn-outline-danger mx-2" data-bs-toggle="modal"
+          data-bs-target="#loginModal">Login</button><button class="btn btn-outline-primary mx-2" data-bs-toggle="modal"
+          data-bs-target="#signupModal">Join For Free</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Signup Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-primary" id="signupModalLabel">Signup To NEXUS Technologies</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="col">
+                First name <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col">
+                Last name <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+            <div class="form-group my-2">
+              <label for="signupFormControlInput1">Email address</label>
+              <input type="email" class="form-control" id="signupFormControlInput1" placeholder="name@example.com">
+            </div>
+            Education <select class="form-control my-2">
+              <option>Select Your Education</option>
+              <option>Information Technology</option>
+              <option>Cyber-security</option>
+              <option>Comerce</option>
+              <option>Agriculture</option>
+              <option>Education</option>
+              <option>Health and Physical Education</option>
+            </select>
+
+            <div class="form-group">
+              <label for="signupFormControlTextarea1">Example textarea</label>
+              <textarea class="form-control" id="signupFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary my-4">Signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Login Modal -->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-primary" id="loginModalLabel">Login To NEXUS Technologies</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="loginInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="loginInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="loginInputPassword1">Password</label>
+              <input type="password" class="form-control" id="loginInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="loginCheck1">
+              <label class="form-check-label" for="loginCheck1">Keep me Login</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- courses  -->
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+   <h2 style="font-family: bree serif;" class="my-4">Top Courses We Are Offering Free
+    </h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c6.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c4.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c5.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c1.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c2.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../static/img/c3.jpg" alt="img">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a
+                      class="text-decoration-none text-black" href="/course"> View Course </a> </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary"> <a
+                      class="text-decoration-none text-black" href="/learn">Start Learning </a> </button>
+                </div>
+                <small class="text-body-secondary">Free</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+   <!-- pagenation -->
+
+   <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+          <img src="../static/img/footer/logo.jpg" height="100px" width="100px" alt="logo">
+        </a>
+        <p class="text-body-secondary">© Copywrite 2023</p>
+      </div>
+
+      <div class="col mb-3">
+
+      </div>
+
+      <div class="col mb-3">
+        <h5>Nexus</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="/mission" class="nav-link p-0 text-body-secondary">Mission</a></li>
+          <li class="nav-item mb-2"><a href="/team" class="nav-link p-0 text-body-secondary">Our Team</a></li>
+          <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+          <li class="nav-item mb-2"><a href="help" class="nav-link p-0 text-body-secondary">Help and Support</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Community</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Teaching Center</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Learners</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Partners</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog Tec</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>More</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Press</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Investors</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Accessibility</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Modern Slavery Statement</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Manage Preferences</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <!-- footer  -->
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© Copywrite 2023 NeXus Technologies.Inc | All Rights Reserved</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-body-secondary" href="https://twitter.com/asadshamsuddin" target="_blank"><img
+              src="../static/img/footer/twitter.png" height="30px" width="30px" alt=""></a>
+        </li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/muhammad-asad-shams-ud-din/"
+            target="_blank"><img src="../static/img/footer/linkedin.png" height="30px" width="30px" alt=""></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://web.facebook.com/Muhammadasadshamsuddin/"
+            target="_blank"><img src="../static/img/footer/facebook.png" height="30px" width="30px" alt=""></a></li>
+      </ul>
+    </footer>
+  </div>
+    <!-- js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
